@@ -1,0 +1,22 @@
+/* App.css */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Arial", sans-serif;
+  background-color: black;
+}
+
+.content {
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.content h1 {
+  font-size: 3em;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 2px;
+}
