@@ -1,7 +1,6 @@
 import React from "react";
-import { Slide } from "react-slideshow-image";
+import { Slide } from "react-slideshow-image"; // Correct import
 import "react-slideshow-image/dist/styles.css";
-import "./App.css";
 
 const spanStyle = {
   padding: 0,
@@ -10,12 +9,23 @@ const spanStyle = {
   textShadow: "2px 2px 1px #000000",
 };
 
+const settings = {
+  indicators: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  cssEase: "linear",
+};
+
 const divStyle = {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   backgroundSize: "cover",
-  height: "1000px",
+  height: "980px",
   border: "5px solid black",
 };
 
@@ -40,16 +50,7 @@ const slideImages = [
 const ImageSlider = () => {
   return (
     <div className="image-slider">
-      <Slide
-        indicators={true}
-        infinite={true}
-        speed={500}
-        slidesToShow={1}
-        slidesToScroll={1}
-        autoplay={true}
-        autoplaySpeed={2000}
-        cssEase="linear"
-      >
+      <Slide {...settings}>
         {slideImages.map((slideImage, index) => (
           <div key={index}>
             <div
